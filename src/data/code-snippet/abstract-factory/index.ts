@@ -1,99 +1,141 @@
 // Abstract Factory interface
-interface StoreTemplateFactory {
-	createHeader(): Header;
-	createFooter(): Footer;
-	createProductList(): ProductList;
+interface ProductDetailFactory {
+	createColorSelector(): Selector;
+	createSizeSelector(): Selector;
+	createBrandSelector(): Selector;
 }
 
-// Light Color Scheme Factory
-class LightStoreTemplateFactory implements StoreTemplateFactory {
-	createHeader(): Header {
-		return new LightHeader();
+// Clothing Factory
+class ClothingDetailFactory implements ProductDetailFactory {
+	createColorSelector(): Selector {
+		return new ClothingColorSelector();
 	}
-	createFooter(): Footer {
-		return new LightFooter();
+	createSizeSelector(): Selector {
+		return new ClothingSizeSelector();
 	}
-	createProductList(): ProductList {
-		return new LightProductList();
-	}
-}
-
-// Dark Color Scheme Factory
-class DarkStoreTemplateFactory implements StoreTemplateFactory {
-	createHeader(): Header {
-		return new DarkHeader();
-	}
-	createFooter(): Footer {
-		return new DarkFooter();
-	}
-	createProductList(): ProductList {
-		return new DarkProductList();
+	createBrandSelector(): Selector {
+		return new ClothingBrandSelector();
 	}
 }
 
-// Product Components
-interface Header {
-	render(): void;
-}
-
-class LightHeader implements Header {
-	render(): void {
-		console.log('Rendering light header...');
+// Electronic Factory
+class ElectronicDetailFactory implements ProductDetailFactory {
+	createColorSelector(): Selector {
+		return new ElectronicColorSelector();
+	}
+	createSizeSelector(): Selector {
+		return new ElectronicSizeSelector();
+	}
+	createBrandSelector(): Selector {
+		return new ElectronicBrandSelector();
 	}
 }
 
-class DarkHeader implements Header {
-	render(): void {
-		console.log('Rendering dark header...');
+// Selector Components
+interface Selector {
+	render(): HTMLElement;
+}
+
+class ClothingColorSelector implements Selector {
+	render(): HTMLElement {
+		const selectElement = document.createElement('select');
+		selectElement.innerHTML = `
+		<option>Red</option>
+		<option>Green</option>
+		<option>Blue</option>
+		`;
+		return selectElement;
 	}
 }
 
-interface Footer {
-	render(): void;
-}
-
-class LightFooter implements Footer {
-	render(): void {
-		console.log('Rendering light footer...');
+class ClothingSizeSelector implements Selector {
+	render(): HTMLElement {
+		const selectElement = document.createElement('select');
+		selectElement.innerHTML = `
+		<option>Small</option>
+		<option>Medium</option>
+		<option>Large</option>
+		`;
+		return selectElement;
 	}
 }
 
-class DarkFooter implements Footer {
-	render(): void {
-		console.log('Rendering dark footer...');
+class ClothingBrandSelector implements Selector {
+	render(): HTMLElement {
+		const selectElement = document.createElement('select');
+		selectElement.innerHTML = `
+		<option>Adidas</option>
+		<option>Nike</option>
+		<option>Puma</option>
+		`;
+		return selectElement;
 	}
 }
 
-interface ProductList {
-	render(): void;
-}
-
-class LightProductList implements ProductList {
-	render(): void {
-		console.log('Rendering light product list...');
+class ElectronicColorSelector implements Selector {
+	render(): HTMLElement {
+		const selectElement = document.createElement('select');
+		selectElement.innerHTML = `
+		<option>Black</option>
+		<option>Silver</option>
+		<option>White</option>
+		`;
+		return selectElement;
 	}
 }
 
-class DarkProductList implements ProductList {
-	render(): void {
-		console.log('Rendering dark product list...');
+class ElectronicSizeSelector implements Selector {
+	render(): HTMLElement {
+		const selectElement = document.createElement('select');
+		selectElement.innerHTML = `
+		<option>16 GB</option>
+		<option>32 GB</option>
+		<option>64 GB</option>
+		`;
+		return selectElement;
+	}
+}
+
+class ElectronicBrandSelector implements Selector {
+	render(): HTMLElement {
+		const selectElement = document.createElement('select');
+		selectElement.innerHTML = `
+		<option>Apple</option>
+		<option>Samsung</option>
+		<option>Sony</option>
+		`;
+		return selectElement;
 	}
 }
 
 // Usage example
-const colorScheme = getUserSelectedColorScheme(); // assume this returns 'light' or 'dark'
-let factory: StoreTemplateFactory;
 
-if (colorScheme === 'light') {
-	factory = new LightStoreTemplateFactory();
+const getProductTypeFromUrl = (): string => {
+	const random = Math.floor(Math.random() * 2);
+
+	if (random === 0) {
+		return 'electronic';
+	}
+
+	return 'clothing';
+};
+
+const productType = getProductTypeFromUrl();
+
+let factory: ProductDetailFactory;
+
+if (productType === 'clothing') {
+	factory = new ClothingDetailFactory();
 } else {
-	factory = new DarkStoreTemplateFactory();
+	factory = new ElectronicDetailFactory();
 }
 
-const header = factory.createHeader();
-const footer = factory.createFooter();
-const productList = factory.createProductList();
+const colorSelector = factory.createColorSelector();
+const sizeSelector = factory.createSizeSelector();
+const brandSelector = factory.createBrandSelector();
 
-header.render();
-productList.render();
-footer.render();
+const containerElement = document.getElementById('product-details');
+
+containerElement?.appendChild(colorSelector.render());
+containerElement?.appendChild(sizeSelector.render());
+containerElement?.appendChild(brandSelector.render());
