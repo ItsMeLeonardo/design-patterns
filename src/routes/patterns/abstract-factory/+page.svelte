@@ -25,7 +25,7 @@
 </script>
 
 <section class="flex flex-col items-center p-2 pb-8">
-	<PatternHeader title="Factory Method">
+	<PatternHeader title="Abstract Factory">
 		<p slot="description" class="">
 			Es un patrón de
 			<Annotation visible type="highlight" color="#c084fc">diseño creacional</Annotation> que nos permite
