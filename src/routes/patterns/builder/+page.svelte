@@ -44,7 +44,7 @@
 		builder.withWebsite(website);
 		builder.withEmail(email);
 
-		const profile = builder.getProfile();
+		builder.getProfile();
 
 		profileVisible = true;
 	}
