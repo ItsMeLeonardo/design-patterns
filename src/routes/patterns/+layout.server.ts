@@ -6,8 +6,11 @@ export const load: LayoutServerLoad = async ({ url }) => {
 
 	const snippet = snippetList.find((snippet) => path.includes(snippet.name.toLocaleLowerCase()));
 
+	const patternList = snippetList.map((snippet) => snippet.name.toLocaleLowerCase());
+
 	return {
 		snippet: snippet?.code,
-		patternName: snippet?.name
+		patternName: snippet?.name,
+		patternList
 	};
 };
