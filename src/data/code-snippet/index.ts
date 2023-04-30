@@ -2,6 +2,7 @@ import TemplateFactory from './factory-method?raw';
 import TemplateAbstractFactory from './abstract-factory?raw';
 import TemplateBuilder from './builder?raw';
 import TemplatePrototype from './prototype?raw';
+import TemplateSingleton from './singleton?raw';
 
 export const snippetList = [
 	{
@@ -19,5 +20,9 @@ export const snippetList = [
 	{
 		name: 'prototype',
 		code: TemplatePrototype
+	},
+	{
+		name: 'singleton',
+		code: TemplateSingleton
 	}
 ];
