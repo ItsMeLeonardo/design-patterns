@@ -5,7 +5,11 @@ const config = {
 	],
 
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				mono: ['Ubuntu Mono', 'monospace']
+			}
+		}
 	},
 
 	plugins: [require('flowbite/plugin')],
