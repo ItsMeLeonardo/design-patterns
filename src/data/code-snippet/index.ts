@@ -6,6 +6,7 @@ import TemplateSingleton from './singleton?raw';
 
 import Adapter from './adapter?raw';
 import Composite from './composite?raw';
+import Decorator from './decorator?raw';
 
 export const snippetList = [
 	{
@@ -32,9 +33,12 @@ export const snippetList = [
 		name: 'adapter',
 		code: Adapter
 	},
-
 	{
 		name: 'composite',
 		code: Composite
+	},
+	{
+		name: 'decorator',
+		code: Decorator
 	}
 ];
