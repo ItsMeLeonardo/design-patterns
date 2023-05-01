@@ -7,7 +7,9 @@ import TemplateSingleton from './singleton?raw';
 import Adapter from './adapter?raw';
 import Composite from './composite?raw';
 import Decorator from './decorator?raw';
+
 import ChainOfResponsibility from './chain-of-responsibility?raw';
+import Memento from './memento?raw';
 
 export const snippetList = [
 	{
@@ -45,5 +47,9 @@ export const snippetList = [
 	{
 		name: 'chain-of-responsibility',
 		code: ChainOfResponsibility
+	},
+	{
+		name: 'memento',
+		code: Memento
 	}
 ];
