@@ -5,6 +5,7 @@ import TemplatePrototype from './prototype?raw';
 import TemplateSingleton from './singleton?raw';
 
 import Adapter from './adapter?raw';
+import Composite from './composite?raw';
 
 export const snippetList = [
 	{
@@ -30,5 +31,10 @@ export const snippetList = [
 	{
 		name: 'adapter',
 		code: Adapter
+	},
+
+	{
+		name: 'composite',
+		code: Composite
 	}
 ];
