@@ -23,10 +23,10 @@
 	let textColor = '#000000';
 </script>
 
-<section class="flex flex-col items-center p-2 pb-8">
+<section class="flex flex-col items-center md:p-2 pb-8">
 	<PatternHeader title="Decorator">
 		<p slot="description" class="">
-			es un patrón de diseño estructural que te permite
+			Es un patrón de diseño estructural que te permite
 			<Annotation visible type="highlight" color="#c084fc">
 				añadir funcionalidades a objetos
 			</Annotation>
@@ -35,7 +35,7 @@
 	</PatternHeader>
 
 	<h2 class="mx-auto font-medium text-2xl text-center">
-		<Annotation visible type="underline" color="#7c3aed">Ejemplo</Annotation>
+		<Annotation visible type="underline" color="#c084fc">Ejemplo</Annotation>
 	</h2>
 
 	<div class="mt-8 bg-gray-200 flex flex-col items-center justify-center rounded-lg p-4 gap-4">

@@ -24,20 +24,18 @@
 	}
 </script>
 
-<section class="flex flex-col items-center p-2 pb-8">
+<section class="flex flex-col items-center md:p-2 pb-8">
 	<PatternHeader title="Adapter">
 		<p slot="description" class="">
 			Este patron se basa en el clásico conflicto entre piezas cuadradas y agujeros redondos. El
 			patrón Adapter permite que objetos con
-			<Annotation visible type="highlight" color="#7c3aed">
-				<span class="text-white">interfaces incompatibles</span>
-			</Annotation>
+			<Annotation visible type="highlight" color="#c084fc">interfaces incompatibles</Annotation>
 			trabajen juntos.
 		</p>
 	</PatternHeader>
 
 	<h2 class="mx-auto font-medium text-2xl text-center">
-		<Annotation visible type="underline" color="#7c3aed">Ejemplo</Annotation>
+		<Annotation visible type="underline" color="#c084fc">Ejemplo</Annotation>
 	</h2>
 
 	<div class="pt-8">

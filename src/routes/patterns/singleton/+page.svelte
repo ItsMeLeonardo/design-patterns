@@ -17,7 +17,7 @@
 	</PatternHeader>
 
 	<h2 class="mx-auto font-medium text-2xl text-center">
-		<Annotation visible type="underline" color="#7c3aed">Ejemplo</Annotation>
+		<Annotation visible type="underline" color="#c084fc">Ejemplo</Annotation>
 	</h2>
 
 	<div class:dark={darkMode}>

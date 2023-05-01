@@ -5,21 +5,17 @@
 	import PatternHeader from '../../../components/PatternHeader.svelte';
 </script>
 
-<section class="flex flex-col items-center p-2 pb-8">
+<section class="flex flex-col items-center md:p-2 pb-8">
 	<PatternHeader title="Composite">
 		<p slot="description" class="">
-			Es un patron que te permite componer objetos en <Annotation
-				visible
-				type="highlight"
-				color="#c084fc"
-			>
-				estructuras de árbol
-			</Annotation> y trabajar con esas estructuras como si fueran objetos individuales.
+			Es un patron que te permite componer objetos en
+			<Annotation visible type="highlight" color="#c084fc">estructuras de árbol</Annotation> y trabajar
+			con esas estructuras como si fueran objetos individuales.
 		</p>
 	</PatternHeader>
 
 	<h2 class="mx-auto font-medium text-2xl text-center">
-		<Annotation visible type="underline" color="#7c3aed">Ejemplo</Annotation>
+		<Annotation visible type="underline" color="#c084fc">Ejemplo</Annotation>
 	</h2>
 
 	<div class="mt-8">

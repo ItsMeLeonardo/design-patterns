@@ -28,7 +28,7 @@
 		</span>
 	</NavBrand>
 	<div class="flex md:order-2">
-		<Button
+		<!-- <Button
 			data-collapse-toggle="mobile-menu-3"
 			aria-controls="mobile-menu-3"
 			aria-expanded="false"
@@ -47,8 +47,8 @@
 					d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
 				/></svg
 			>
-		</Button>
-		<div class="hidden relative md:block">
+		</Button> -->
+		<!-- <div class="hidden relative md:block">
 			<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@
 				>
 			</div>
 			<Input id="search-navbar" class="pl-10" placeholder="Search..." />
-		</div>
+		</div> -->
 		<NavHamburger on:click={toggle} />
 	</div>
 
