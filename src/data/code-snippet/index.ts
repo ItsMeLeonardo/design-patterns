@@ -4,6 +4,8 @@ import TemplateBuilder from './builder?raw';
 import TemplatePrototype from './prototype?raw';
 import TemplateSingleton from './singleton?raw';
 
+import Adapter from './adapter?raw';
+
 export const snippetList = [
 	{
 		name: 'factory-method',
@@ -24,5 +26,9 @@ export const snippetList = [
 	{
 		name: 'singleton',
 		code: TemplateSingleton
+	},
+	{
+		name: 'adapter',
+		code: Adapter
 	}
 ];
