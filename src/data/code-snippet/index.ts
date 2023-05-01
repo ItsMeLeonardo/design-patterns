@@ -10,6 +10,7 @@ import Decorator from './decorator?raw';
 
 import ChainOfResponsibility from './chain-of-responsibility?raw';
 import Memento from './memento?raw';
+import Observer from './observer?raw';
 
 export const snippetList = [
 	{
@@ -51,5 +52,9 @@ export const snippetList = [
 	{
 		name: 'memento',
 		code: Memento
+	},
+	{
+		name: 'observer',
+		code: Observer
 	}
 ];
